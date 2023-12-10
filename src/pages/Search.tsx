@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import {
   Box,
   Button,
@@ -6,13 +8,13 @@ import {
   Typography,
   styled,
 } from "@mui/material";
-import Header from "../components/Header";
-import { useEffect, useState } from "react";
+
 import { useGetSearchMovie } from "../hooks/useGetSearchMovie";
-import { ListResultType } from "../types/types";
 import { useObserver } from "../hooks/useObserver";
-import { useLocation } from "react-router-dom";
+import { ListResultType } from "../types/types";
+
 import MovieCard from "../components/MovieCard";
+import Header from "../components/Header";
 
 const InputWrap = styled(Box)`
   background-color: white;
@@ -53,6 +55,7 @@ const Search = () => {
     refetch();
   };
   const path = "https://image.tmdb.org/t/p/original";
+
   return (
     <Container sx={{ paddingTop: "60px" }}>
       <Header />

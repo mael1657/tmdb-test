@@ -1,13 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { getSearchMovies } from "../api";
 
-// export const useGetSearchMovie = (page: number) => {
-//   return useQuery({
-//     queryKey: ["search-movie"],
-//     queryFn: () => getSearchMovies(page),
-//     enabled: false,
-//   });
-// };
+import { getSearchMovies } from "../api";
 
 export const useGetSearchMovie = (title: string) => {
   return useInfiniteQuery({

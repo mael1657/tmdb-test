@@ -1,11 +1,13 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { getMovieList } from "../api";
-import { Box, Button, Container, TextField, styled } from "@mui/material";
-import Header from "../components/Header";
-import { useObserver } from "../hooks/useObserver";
-import { ListResultType } from "../types/types";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { Box, Button, Container, TextField, styled } from "@mui/material";
+
+import { getMovieList } from "../api";
+import { ListResultType } from "../types/types";
+import { useObserver } from "../hooks/useObserver";
+
+import Header from "../components/Header";
 import MovieCard from "../components/MovieCard";
 
 const InputWrap = styled(Box)`
@@ -43,7 +45,7 @@ const Main = () => {
 
   const onClickSearch = () => {
     navigate("/search", {
-      state: { searchInput: searchInput === null ? "" : searchInput },
+      state: { searchInput },
     });
   };
 

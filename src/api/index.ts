@@ -31,7 +31,7 @@ export const postCreateSession = async (request_token: string) => {
 export const getMovieList = async (
   page: number
 ): Promise<ResponseDataResult<GetMovieListResponse>> => {
-  return await api.get(`/movie/popular?language=kr-KR&page=${page}`);
+  return await api.get(`/movie/popular?language=ko-KR&page=${page}`);
 };
 
 export const getSearchMovies = async (

@@ -1,8 +1,9 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import styled from "@emotion/styled";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+
 import { postAddFavorite } from "../api";
 
 type Props = {

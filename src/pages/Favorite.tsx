@@ -1,10 +1,12 @@
 import { Box, Container } from "@mui/material";
-import Header from "../components/Header";
 import { useInfiniteQuery } from "@tanstack/react-query";
+
 import { getFavoriteMovieList } from "../api";
 import { useObserver } from "../hooks/useObserver";
 import { ListResultType } from "../types/types";
+
 import MovieCard from "../components/MovieCard";
+import Header from "../components/Header";
 
 const Favorite = () => {
   const { data, fetchNextPage } = useInfiniteQuery({
